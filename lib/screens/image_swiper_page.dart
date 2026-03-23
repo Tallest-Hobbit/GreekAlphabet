@@ -20,7 +20,17 @@ class _ImageSwiperPageState extends State<ImageSwiperPage> {
 
   Future<void> _handleTap(bool isTopHalf) async {
     final item = imageSoundItems[_currentIndex];
-    final soundPath = isTopHalf ? item.topSoundPath : item.bottomSoundPath;
+    final String? soundPath =
+        isTopHalf ? item.topSoundPath : item.bottomSoundPath;
+
+    if (soundPath == null) {
+      if (!mounted) return;
+      setState(() {
+        _statusMessage =
+            isTopHalf ? 'No top sound for this image' : 'No bottom sound for this image';
+      });
+      return;
+    }
 
     try {
       await _audioService.playAsset(soundPath);
@@ -86,7 +96,7 @@ class _ImageSwiperPageState extends State<ImageSwiperPage> {
               width: double.infinity,
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                  color: Theme.of(context).colorScheme.surfaceVariant,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

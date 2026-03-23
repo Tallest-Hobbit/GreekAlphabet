@@ -2,21 +2,19 @@ import '../models/image_sound_item.dart';
 
 const List<ImageSoundItem> imageSoundItems = [
   ImageSoundItem(
-    title: 'Image 1',
-    imagePath: 'assets/images/image1.jpg',
-    topSoundPath: 'assets/sounds/image1_top.mp3',
-    bottomSoundPath: 'assets/sounds/image1_bottom.mp3',
+    title: '1title',
+    imagePath: 'assets/images/1title.jpg',
   ),
   ImageSoundItem(
-    title: 'Image 2',
-    imagePath: 'assets/images/image2.jpg',
-    topSoundPath: 'assets/sounds/image2_top.mp3',
-    bottomSoundPath: 'assets/sounds/image2_bottom.mp3',
+    title: '2alpha',
+    imagePath: 'assets/images/2alpha.jpg',
+    topSoundPath: 'assets/sounds/2alphatop.mp3',
+    bottomSoundPath: 'assets/sounds/2alphabottom.mp3',
   ),
   ImageSoundItem(
-    title: 'Image 3',
-    imagePath: 'assets/images/image3.jpg',
-    topSoundPath: 'assets/sounds/image3_top.mp3',
-    bottomSoundPath: 'assets/sounds/image3_bottom.mp3',
+    title: '3beta',
+    imagePath: 'assets/images/3beta.jpg',
+    topSoundPath: 'assets/sounds/3betatop.mp3',
+    bottomSoundPath: 'assets/sounds/3betabottom.mp3',
   ),
 ];
